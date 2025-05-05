@@ -212,19 +212,32 @@ int main(int argc, char* argv[])
                     cout << "VSS name: " << VSS_name << endl;
                 }
 
-                cout << "Inputs: " << endl;
-
-                for (vector<string>::iterator in_iter = inputs.begin(); in_iter != inputs.end(); ++in_iter)
+                if (inputs.size() + outputs.size() < 10)
                 {
-                    cout << *in_iter << endl; 
+                    cout << "Inputs: " << endl;
+
+                    for (vector<string>::iterator in_iter = inputs.begin(); in_iter != inputs.end(); ++in_iter)
+                    {
+                        cout << *in_iter << endl; 
+                    }
+
+                    cout << "Outputs: " << endl;
+
+                    for (vector<string>::iterator out_iter = outputs.begin(); out_iter != outputs.end(); ++out_iter)
+                    {
+                        cout << *out_iter << endl; 
+                    }
+
+
+
+                }
+                else
+                {
+                    cout << "number of inputs + outputs is 10 or greater, will not display them" << endl;
                 }
 
-                cout << "Outputs: " << endl;
 
-                for (vector<string>::iterator out_iter = outputs.begin(); out_iter != outputs.end(); ++out_iter)
-                {
-                    cout << *out_iter << endl; 
-                }
+
 
                 cout << "" << endl;
                 cout << "Is this what you want? type 'yes' if this correct " << endl;
